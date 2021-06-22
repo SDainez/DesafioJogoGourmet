@@ -1,12 +1,16 @@
 
-public class Jogo {
+public class Jogo implements Runnable {
     private Cardapio listaDePratos;
     private Boolean acertadoOuAdcionado = false;
-    private Comunicacao mensagem;
+    private final Comunicacao mensagem;
 
     public Jogo() {
         iniciaJogo();
         mensagem = new Comunicacao();
+    }
+
+    public void run(){
+        jogar();
     }
 
     public void jogar(){

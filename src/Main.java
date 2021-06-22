@@ -9,7 +9,8 @@ public class Main {
             resposta = mensagem.penseEmUmPrato();
 
             if (resposta == 0) {
-                jogoGourmet.jogar();
+                Thread jogo = new Thread(jogoGourmet);
+                jogo.start();
             }
         }while (resposta == 0);
 

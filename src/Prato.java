@@ -1,6 +1,6 @@
 
 public class Prato {
-    private String nomePrato;
+    private final String nomePrato;
 
     public Prato(String prato){
         this.nomePrato = prato;
